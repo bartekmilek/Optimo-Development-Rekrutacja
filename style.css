@@ -1,0 +1,241 @@
+body{
+    height: 100vh;
+    max-height: 100vh;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 0 4px #000;
+    background-color: green;
+    font-size: 20px;
+}
+
+#top-bar{
+    width: 100%;
+    height: 5vh;
+    background-color: #808000;
+    box-shadow: inset 0 0 0 4px #000;
+    transition: height 0.2s ease-in;
+}
+
+#top-half-wrapper{
+    width: calc(100% - 8px);
+    border-left: 4px solid #000;
+    border-right: 4px solid #000;
+    height: 50vh;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#squares-section{
+    width: 100%;
+    height: 30vh;
+    position: relative;
+}
+
+#squares-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+    margin-left: -5px;
+    margin-top: 5px;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 55px;
+    left: 20px;
+}
+
+.square{
+    background-color: #FF0000;
+    border: 4px solid #000;
+    width: 5rem;
+    height: 5rem;
+}
+
+#square2{
+    margin-top: 10px;
+}
+
+#rectangles-circle-section{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+
+#rectangles-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    height: 5rem;
+    margin-left: 1rem;
+}
+
+.rectangle{
+    width: 6rem;
+    height: 0.6rem;
+    background-color: #0000FF;
+    border: 4px solid #000;
+}
+
+#circle{
+    border: 4px solid #000;
+    background-color: #008080;
+    width: 5.5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+#bottom-half-wrapper{
+    height: calc(45vh - 4px);
+    width: calc(100% - 8px);
+    border-left: 4px solid #000;
+    border-right: 4px solid #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#big-rectangle{
+    background-color: #0000FF;
+    border: 4px solid #000;
+    height: 90%;
+    width: 160px;
+    margin-left: 15%;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    transition: background-color .2s ease-in;
+}
+
+
+p{
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-family: sans-serif;
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+
+@media screen and (min-width: 583px){
+    main{
+        display: flex;
+    }
+
+    #top-bar{
+        height: 10vh;
+        box-shadow: inset 0 0 0 5px #000;
+    }
+
+    #top-half-wrapper{
+        border: none;
+        height: calc(90vh - 8px);
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #squares-section{
+        position: relative;
+    }
+
+    #squares-wrapper{
+        top: 60px;
+        left: 20px;
+    }
+
+    .square{
+        width: 6rem;
+        height: 6rem;
+    }
+
+    #bottom-half-wrapper{
+        border: none;
+        height: calc(90vh - 8px);
+        position: relative;
+    }
+
+    #rectangles-wrapper{
+       height: 100%;
+       justify-content: center;
+       gap: 30px;
+    }
+
+    #rectangles-circle-section{
+        height: 30vh;
+    }
+
+    .rectangle{
+        width: 6rem;
+        height: 0.6rem;
+    }
+
+    #circle{
+        width: 6rem;
+        height: 5.5rem;
+        border-radius: 48%;
+    }
+
+    #big-rectangle{
+        background-color: #C83737;
+        position: absolute;
+        bottom: 5px;
+        right: 25px;
+        width: 190px;
+    }
+
+    p{
+        margin-top: 15px;
+    }
+
+}
+
+@media screen and (min-width: 900px){
+
+    #top-half-wrapper{
+        width: 66%;
+        height: calc(50vh - 4px);
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #bottom-half-wrapper{
+        width: 34%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    #squares-section{
+        height: 100%;
+    }
+
+    #squares-wrapper{
+        top: 60px;
+    }
+
+    #rectangles-circle-section{
+        height: 100%;
+        justify-content: flex-end;
+    }
+
+    #big-rectangle{
+        background-color: #fff;
+        width: 175px;
+        height: 90%;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        margin: unset;
+    }
+    
+}
